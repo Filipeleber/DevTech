@@ -18,19 +18,17 @@ if (hamburger && navbarMenuWrapper) {
         console.log('🍔 Menu toggle:', hamburger.classList.contains('active'));
     });
     
-    // Fechar menu ao clicar em link
-    // CORRIGIDO: Seleciona os links dentro do wrapper
-    document.querySelectorAll('.navbar-menu-wrapper .nav-menu a').forEach(link => {
+   // Fechar menu ao clicar em link
+    // CORRIGIDO: Adicionado :not(.dropdown-toggle) para NÃO fechar o menu ao clicar no dropdown
+    document.querySelectorAll('.navbar-menu-wrapper .nav-menu a:not(.dropdown-toggle)').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 console.log('🔗 Fechando menu...');
                 hamburger.classList.remove('active');
-                // CORRIGIDO: Usa a variável correta
                 navbarMenuWrapper.classList.remove('active');
             }
         });
     });
-    
     // Dropdown toggle mobile
     document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
         toggle.addEventListener('click', (e) => {
@@ -127,3 +125,4 @@ if (formContato) {
 }
 
 console.log('✅ TUDO CARREGADO!');
+
