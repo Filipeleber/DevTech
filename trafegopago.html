@@ -106,25 +106,23 @@
     <div class="container">
         <div class="logo">DevTech</div>
         
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="main.html#inicio">Início</a></li>
-            <li><a href="main.html#sobre">Sobre</a></li>
-            
-            <!-- DROPDOWN CORRETO -->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">
-                    Soluções <i class="fas fa-chevron-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                    <a href="automaçãoia.html"><i class="fas fa-robot"></i> IA & Automação</a>
-                    <a href="trafegopago.html"><i class="fas fa-bullhorn"></i> Tráfego & Marketing</a>
-                </div>
-            </li>
-            
-            <li><a href="main.html#servicos">Serviços</a></li>
-            <li><a href="main.html#contato">Contato</a></li>
-        </ul>
-        
+        <div class="navbar-menu-wrapper">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="main.html#inicio">Início</a></li>
+                <li><a href="main.html#sobre">Sobre</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Soluções <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="automaçãoia.html"><i class="fas fa-robot"></i> IA & Automação</a>
+                        <a href="trafegopago.html"><i class="fas fa-bullhorn"></i> Tráfego & Marketing</a>
+                    </div>
+                </li>
+                
+                <li><a href="main.html#servicos">Serviços</a></li> <li><a href="main.html#contato">Contato</a></li> </ul>
+        </div>
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
@@ -132,7 +130,6 @@
         </button>
     </div>
 </nav>
-
     <!-- Hero -->
     <section class="trafego-hero">
         <div class="container">
@@ -254,4 +251,5 @@
     <script src="src/js/script.js"></script>
 </body>
 </html>
+
 
