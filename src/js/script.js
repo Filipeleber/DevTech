@@ -2,10 +2,10 @@ console.log('📱 DevTech Script - Menu Mobile e Funcionalidades');
 
 // ==================== MENU MOBILE ====================
 const hamburger = document.getElementById('hamburger');
-// CORRIGIDO: Seleciona a classe que acabamos de adicionar no HTML
+// CORRIGIDO: Seleciona a classe correta
 const navbarMenuWrapper = document.querySelector('.navbar-menu-wrapper');
 
-// CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+// CORRIGIDO: Checa a variável correta ('navbarMenuWrapper')
 if (hamburger && navbarMenuWrapper) {
     console.log('✅ Elementos do menu encontrados');
     
@@ -13,19 +13,19 @@ if (hamburger && navbarMenuWrapper) {
     hamburger.addEventListener('click', (e) => {
         e.stopPropagation();
         hamburger.classList.toggle('active');
-        // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+        // CORRIGIDO: Usa a variável correta
         navbarMenuWrapper.classList.toggle('active');
         console.log('🍔 Menu toggle:', hamburger.classList.contains('active'));
     });
     
     // Fechar menu ao clicar em link
-    // CORRIGIDO: Seleciona os links DENTRO do wrapper
+    // CORRIGIDO: Seleciona os links dentro do wrapper
     document.querySelectorAll('.navbar-menu-wrapper .nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
                 console.log('🔗 Fechando menu...');
                 hamburger.classList.remove('active');
-                // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+                // CORRIGIDO: Usa a variável correta
                 navbarMenuWrapper.classList.remove('active');
             }
         });
@@ -45,70 +45,23 @@ if (hamburger && navbarMenuWrapper) {
     
     // Fechar ao clicar fora
     document.addEventListener('click', (e) => {
+        // CORRIGIDO: Checa a variável correta
         if (window.innerWidth <= 768 && navbarMenuWrapper.classList.contains('active')) {
-            // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+            // CORRIGIDO: Usa a variável correta
             const clicouDentro = navbarMenuWrapper.contains(e.target);
             const clicouHamburger = hamburger.contains(e.target);
             
             if (!clicouDentro && !clicouHamburger) {
                 hamburger.classList.remove('active');
-                // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+                // CORRIGIDO: Usa a variável correta
                 navbarMenuWrapper.classList.remove('active');
             }
         }
     });
     
 } else {
-    // Agora este log de erro vai funcionar se algo estiver faltando
+    // CORRIGIDO: Mensagem de erro mais clara
     console.error('❌ Menu mobile não encontrado. Verifique o ID "hamburger" e a classe ".navbar-menu-wrapper"');
-}
-    
-    // Toggle menu
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navbarMenuWrapper.classList.toggle('active');
-        console.log('🍔 Menu toggle:', hamburger.classList.contains('active'));
-    });
-    
-    // Fechar menu ao clicar em link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                console.log('🔗 Fechando menu...');
-                hamburger.classList.remove('active');
-                navbarMenuWrapper.classList.remove('active');
-            }
-        });
-    });
-    
-    // Dropdown toggle mobile
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                const dropdown = toggle.closest('.dropdown');
-                dropdown.classList.toggle('active');
-                console.log('📂 Dropdown:', dropdown.classList.contains('active'));
-            }
-        });
-    });
-    
-    // Fechar ao clicar fora
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && navbarMenuWrapper.classList.contains('active')) {
-            const clicouDentro = navbarMenuWrapper.contains(e.target);
-            const clicouHamburger = hamburger.contains(e.target);
-            
-            if (!clicouDentro && !clicouHamburger) {
-                hamburger.classList.remove('active');
-                navbarMenuWrapper.classList.remove('active');
-            }
-        }
-    });
-    
-} else {
-    console.error('❌ Menu mobile não encontrado');
 }
 
 // ==================== ANIMATIONS ====================
@@ -174,4 +127,3 @@ if (formContato) {
 }
 
 console.log('✅ TUDO CARREGADO!');
-
