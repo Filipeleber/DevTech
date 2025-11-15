@@ -474,29 +474,7 @@ h1, h2, h3, h4 {
     .hamburger {
         display: flex;
     }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background: var(--primary-color);
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        transition: var(--transition);
-        gap: 2rem;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu a {
-        font-size: 1.5rem;
-    }
-
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -1021,3 +999,4 @@ h1, h2, h3, h4 {
         transform: rotate(180deg);
     }
 }
+
