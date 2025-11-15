@@ -2,10 +2,66 @@ console.log('📱 DevTech Script - Menu Mobile e Funcionalidades');
 
 // ==================== MENU MOBILE ====================
 const hamburger = document.getElementById('hamburger');
+// CORRIGIDO: Seleciona a classe que acabamos de adicionar no HTML
 const navbarMenuWrapper = document.querySelector('.navbar-menu-wrapper');
 
+// CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
 if (hamburger && navbarMenuWrapper) {
     console.log('✅ Elementos do menu encontrados');
+    
+    // Toggle menu
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+        navbarMenuWrapper.classList.toggle('active');
+        console.log('🍔 Menu toggle:', hamburger.classList.contains('active'));
+    });
+    
+    // Fechar menu ao clicar em link
+    // CORRIGIDO: Seleciona os links DENTRO do wrapper
+    document.querySelectorAll('.navbar-menu-wrapper .nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                console.log('🔗 Fechando menu...');
+                hamburger.classList.remove('active');
+                // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+                navbarMenuWrapper.classList.remove('active');
+            }
+        });
+    });
+    
+    // Dropdown toggle mobile
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                const dropdown = toggle.closest('.dropdown');
+                dropdown.classList.toggle('active');
+                console.log('📂 Dropdown:', dropdown.classList.contains('active'));
+            }
+        });
+    });
+    
+    // Fechar ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && navbarMenuWrapper.classList.contains('active')) {
+            // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+            const clicouDentro = navbarMenuWrapper.contains(e.target);
+            const clicouHamburger = hamburger.contains(e.target);
+            
+            if (!clicouDentro && !clicouHamburger) {
+                hamburger.classList.remove('active');
+                // CORRIGIDO: 'navbarMenuWrapper' (com 'er' no final)
+                navbarMenuWrapper.classList.remove('active');
+            }
+        }
+    });
+    
+} else {
+    // Agora este log de erro vai funcionar se algo estiver faltando
+    console.error('❌ Menu mobile não encontrado. Verifique o ID "hamburger" e a classe ".navbar-menu-wrapper"');
+}
     
     // Toggle menu
     hamburger.addEventListener('click', (e) => {
@@ -118,3 +174,4 @@ if (formContato) {
 }
 
 console.log('✅ TUDO CARREGADO!');
+
