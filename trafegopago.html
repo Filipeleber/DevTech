@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Domine tráfego pago e marketing fullstack. Estratégias que geraram milhões em vendas para nossos clientes.">
+    <title>DevTech - Tráfego Pago & Marketing Fullstack</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    
+    <style>
+        .trafego-hero {
+            background: linear-gradient(135deg, #00d4ff, #0a0e27);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .trafego-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+        }
+        
+        .trafego-hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .service-showcase {
+            padding: 5rem 0;
+        }
+        
+        .showcase-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        
+        .showcase-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .showcase-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .showcase-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .showcase-content p {
+            color: var(--accent-color);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .showcase-image {
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            min-height: 350px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 5rem 0;
+            background: var(--gray);
+        }
+        
+        .strategy-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .strategy-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .showcase-item {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">DevTech</div>
+            <ul class="nav-menu">
+                <li><a href="main.html">Início</a></li>
+                <li><a href="main.html#sobre">Sobre</a></li>
+                <li class="dropdown">
+                    <a href="#servicos">Soluções <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="automaçãoia.html"><i class="fas fa-robot"></i> IA & Automação</a>
+                        <a href="trafegopago.html"><i class="fas fa-bullhorn"></i> Tráfego & Marketing</a>
+                    </div>
+                </li>
+                <li><a href="main.html#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="trafego-hero">
+        <div class="container">
+            <h1>Tráfego Pago & Marketing Fullstack</h1>
+            <p>Estratégias que geraram R$ 50M+ em vendas para nossos clientes. Domine Google Ads, Meta, TikTok e funis completos.</p>
+        </div>
+    </section>
+
+    <!-- Showcase 1: PPC -->
+    <section class="container service-showcase">
+        <div class="showcase-item">
+            <div class="showcase-content">
+                <i class="fas fa-bullhorn fa-3x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                <h3>Tráfego Pago Inteligente</h3>
+                <p>Automatize lances, crie anúncios dinâmicos e otimize campanhas em tempo real com IA. Nossa equipe gerencia Google Ads, Meta, TikTok e LinkedIn com foco em ROI.</p>
+                <ul style="color: var(--accent-color); padding-left: 1.5rem;">
+                    <li>Lance automático e otimização 24/7</li>
+                    <li>Segmentação hiper-precisa com dados de milhões de usuários</li>
+                    <li>Redução de até 40% no CAC (Custo de Aquisição)</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Resultado:</strong> Clientes veem ROI de 300%+ em 90 dias.</p>
+            </div>
+            <div class="showcase-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800')"></div>
+        </div>
+
+        <div class="showcase-item">
+            <div class="showcase-content">
+                <i class="fas fa-layer-group fa-3x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                <h3>Marketing Fullstack</h3>
+                <p>Do planejamento estratégico à execução técnica. Criamos funis de conversão completos que conectam tráfego, landing pages, email marketing e automação.</p>
+                <ul style="color: var(--accent-color); padding-left: 1.5rem;">
+                    <li>Copywriting persuasivo com IA (GPT-4)</li>
+                    <li>Design de landing pages que convertem em 25%+</li>
+                    <li>Email marketing com entrega 99%+ e automação complexa</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Resultado:</strong> Funnels que convertem 5x mais que a média do mercado.</p>
+            </div>
+            <div class="showcase-image" style="background-image: url('https://images.pexels.com/photos/3184435/pexels-photo-3184435.jpeg')"></div>
+        </div>
+    </section>
+
+    <!-- Strategies Grid -->
+    <section class="container strategies-grid">
+        <h2 class="section-title" style="grid-column: 1/-1;">Estratégias Comprovadas</h2>
+        
+        <div class="strategy-card" data-aos="zoom-in">
+            <i class="fas fa-crosshairs"></i>
+            <h3>Direcionamento Avançado</h3>
+            <p>Usamos IA para identificar personas de alto valor e criar lookalike audiences. Alcance quem realmente compra.</p>
+        </div>
+        
+        <div class="strategy-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Otimização Contínua</h3>
+            <p>Testes A/B automatizados em tempo real. A IA pausa anúncios ruins e amplifica os vencedores.</p>
+        </div>
+        
+        <div class="strategy-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fas fa-chart-area"></i>
+            <h3>Análise de Dados</h3>
+            <p>Conectamos CRMs, analytics e pixels para ver o cliente completo da primeira visita à compra.</p>
+        </div>
+        
+        <div class="strategy-card" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Multiplataforma</h3>
+            <p>Google, Meta, TikTok, LinkedIn... uma estratégia unificada que maximiza cada touchpoint.</p>
+        </div>
+    </section>
+
+    <!-- Real Case -->
+    <section class="container" style="padding: 5rem 0;">
+        <div class="case-card" data-aos="fade-up">
+            <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800')"></div>
+            <div class="case-content">
+                <h3>Case: E-commerce TechBoost</h3>
+                <p><strong>Desafio:</strong> Custo de aquisição alto e baixa conversão.</p>
+                <p><strong>Solução:</strong> Campanhas PPC com IA + Landing otimizada + Email recovery.</p>
+                <p><strong>Resultado:</strong></p>
+                <div class="case-stats">
+                    <div class="stat-item">-45% CAC</div>
+                    <div class="stat-item">+340% Conversão</div>
+                    <div class="stat-item">+R$ 8M Faturamento</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="contato">
+        <div class="container">
+            <h2 class="section-title">Domine Seu Tráfego</h2>
+            <p class="contato-subtitle">Vamos criar uma estratégia fullstack para seu negócio crescer de forma previsível.</p>
+            <a href="main.html#contato" class="btn btn-primary">Quero Minha Estratégia</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>DevTech</h4>
+                    <p>Construindo o futuro, automatizando o presente</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevTech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

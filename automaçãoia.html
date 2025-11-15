@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automatize atendimento, vendas e gestão de dados com IA. Cases reais de empresas que economizaram milhões.">
+    <title>DevTech - IA & Automação para Negócios</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    
+    <style>
+        .cases-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #020617 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .cases-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cases-hero p {
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 5rem 0;
+        }
+        
+        .case-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .case-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .case-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,212,255,0.8), rgba(10,14,39,0.8));
+        }
+        
+        .case-content {
+            padding: 2rem;
+        }
+        
+        .case-content h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .case-content p {
+            color: var(--accent-color);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-stats {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(0,212,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (copie do main.html) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">DevTech</div>
+            <ul class="nav-menu">
+                <li><a href="main.html">Início</a></li>
+                <li><a href="main.html#sobre">Sobre</a></li>
+                <li class="dropdown">
+                    <a href="#servicos">Soluções <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="automaçãoia.html"><i class="fas fa-robot"></i> IA & Automação</a>
+                        <a href="trafegopago.html"><i class="fas fa-bullhorn"></i> Tráfego & Marketing</a>
+                    </div>
+                </li>
+                <li><a href="main.html#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cases-hero">
+        <div class="container">
+            <h1>Automação com IA</h1>
+            <p>Transforme atendimento, vendas e gestão de dados com inteligência artificial. Veja cases reais de empresas que economizaram milhões.</p>
+        </div>
+    </section>
+
+    <!-- Use Cases Grid -->
+    <section class="container">
+        <div class="use-cases-grid">
+            
+            <!-- Case 1: Atendimento -->
+            <div class="case-card" data-aos="fade-up">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800')"></div>
+                <div class="case-content">
+                    <i class="fas fa-headset fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>IA no Atendimento ao Cliente</h3>
+                    <p>Chatbots inteligentes resolvem 80% das dúvidas sem intervenção humana. Reduza custos e aumente a satisfação com atendimento 24/7 personalizado.</p>
+                    <div class="case-stats">
+                        <div class="stat-item">-60% Tempo</div>
+                        <div class="stat-item">+28% Satisfação</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 2: Vendas Comerciais -->
+            <div class="case-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800')"></div>
+                <div class="case-content">
+                    <i class="fas fa-chart-line fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Automação Comercial</h3>
+                    <p>Assistentes IA qualificam leads, agendam reuniões e follow-up automaticamente. Seus vendedores focam apenas em fechar negócios.</p>
+                    <div class="case-stats">
+                        <div class="stat-item">+35% Conversão</div>
+                        <div class="stat-item">+50% Produtividade</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 3: Banco de Dados -->
+            <div class="case-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800')"></div>
+                <div class="case-content">
+                    <i class="fas fa-database fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Gestão Inteligente de Dados</h3>
+                    <p>IA limpa, organiza e analisa milhões de registros automaticamente. Extraia insights estratégicos sem esforço manual.</p>
+                    <div class="case-stats">
+                        <div class="stat-item">10x Mais Rápido</div>
+                        <div class="stat-item">-90% Erros</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 4: Itaú (REAL CASE) -->
+            <div class="case-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="case-image" style="background: url('https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg') center/cover;"></div>
+                <div class="case-content">
+                    <i class="fas fa-university fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Case Itaú: +55M Clientes</h3>
+                    <p>O maior banco da América Latina automatizou atendimento com IA. Economia de R$ 400M/ano e redução de 60% no tempo de resposta.[^7^]</p>
+                    <div class="case-stats">
+                        <div class="stat-item">R$ 400M Economia</div>
+                        <div class="stat-item">10M+ Interações/mês</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 5: Chatbot Inteligente -->
+            <div class="case-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800')"></div>
+                <div class="case-content">
+                    <i class="fas fa-robot fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>Assistentes 24/7 Inteligentes</h3>
+                    <p>Resolva problemas de nível 1 automaticamente. Escale casos complexos para humanos com histórico completo.[^1^]</p>
+                    <div class="case-stats">
+                        <div class="stat-item">80% Resolução IA</div>
+                        <div class="stat-item">+67% Autoatendimento</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 6: Previsão de Dados -->
+            <div class="case-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800')"></div>
+                <div class="case-content">
+                    <i class="fas fa-brain fa-2x" style="color: var(--secondary-color); margin-bottom: 1rem;"></i>
+                    <h3>IA Predicitiva em Bancos de Dados</h3>
+                    <p>Antecipe tendências, identifique padrões ocultos e tome decisões data-driven antes da concorrência.[^6^]</p>
+                    <div class="case-stats">
+                        <div class="stat-item">-50% Ruptura Estoque</div>
+                        <div class="stat-item">+30% Conversão</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="contato">
+        <div class="container">
+            <h2 class="section-title">Quer Automatizar Seu Negócio?</h2>
+            <p class="contato-subtitle">Fale com nossos especialistas e descubra como implementar IA no seu dia a dia.</p>
+            <a href="main.html#contato" class="btn btn-primary">Solicitar Consultoria</a>
+        </div>
+    </section>
+
+    <!-- Footer (copie do main.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>DevTech</h4>
+                    <p>Construindo o futuro, automatizando o presente</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevTech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
