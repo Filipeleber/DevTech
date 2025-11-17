@@ -33,8 +33,9 @@ body {
     transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
-
-.intro-card:hover {
+/* ATIVA O FLIP COM HOVER (DESKTOP) OU COM A CLASSE (MOBILE) */
+.intro-card:hover,
+.intro-card.is-flipped {
     transform: rotateY(180deg);
 }
 
