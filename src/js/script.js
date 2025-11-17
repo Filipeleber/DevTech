@@ -1,4 +1,27 @@
+// ==================== INTRO CARD FLIP (PARA INDEX.HTML) ====================
+const introCard = document.getElementById('introCard');
+
+if (introCard) {
+    console.log('✅ Intro card (index.html) encontrado.');
+    
+    // Adiciona a classe 'is-flipped' no clique/toque
+    introCard.addEventListener('click', (e) => {
+        // Apenas vira o card se o clique não for no botão "Acessar Site"
+        if (!e.target.classList.contains('enter-btn')) {
+            console.log('💳 Card tocado.');
+            introCard.classList.toggle('is-flipped');
+        }
+    });
+
+} else {
+    // Isso é normal, vai aparecer em todas as páginas exceto na index.html
+    console.log('ℹ️ Intro card (index.html) não encontrado nesta página.');
+}
+// =========================================================================
+
+// O RESTO DO SEU SCRIPT.JS COMEÇA AQUI...
 console.log('📱 DevTech Script - Menu Mobile e Funcionalidades');
+// ...etc...
 
 // ==================== MENU MOBILE ====================
 const hamburger = document.getElementById('hamburger');
